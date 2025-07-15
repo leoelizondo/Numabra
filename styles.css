@@ -1,0 +1,148 @@
+:root {
+    --primary-bg: #0B0A0A;
+    --secondary-bg: #191919;
+    --accent-color: #3C0101;
+    --accent-hover: #F00505;
+    --text-color: #FFFFFF;
+    --border-color: #ddd;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .container {
+    background: var(--secondary-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    width: 90%;
+    margin: 200px auto 60px;
+    text-align: center;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
+  
+  button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--accent-hover);
+  }
+  
+  button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    resize: vertical;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  table, th, td {
+    border: 1px solid var(--border-color);
+  }
+  
+  th, td {
+    padding: 10px;
+  }
+  
+  th {
+    background-color: var(--accent-color);
+    color: white;
+  }
+  
+  .top-buttons {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    z-index: 1000;
+  }
+  
+  .top-buttons button {
+    flex: 1 1 auto;
+    min-width: calc(25% - 10px);
+  }
+  
+  footer {
+    background-color: var(--accent-color);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  #loadingMessage {
+    display: none;
+    margin: 20px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      margin-top: 250px;
+    }
+    
+    .top-buttons {
+      gap: 5px;
+    }
+    
+    .top-buttons button {
+      min-width: calc(50% - 5px);
+      font-size: 0.9rem;
+      padding: 8px 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      margin-top: 300px;
+    }
+    
+    .top-buttons button {
+      min-width: 100%;
+    }
+  }

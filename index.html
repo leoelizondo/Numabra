@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Numabra - A numerological tool for discovering hidden connections between words">
+    <meta name="keywords" content="numabra, numerology, word values, gematria, isopsephia">
+    <meta name="author" content="Leonel Elizondo">
+    <title>Numabra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="top-buttons" aria-label="Quick links">
+        <button id="blog" onclick="window.open('https://mi-casa-flota-en-el-oceano.webnode.page/','_blank')" aria-label="Personal Blog">Personal Blog</button>
+        <button id="instagram" onclick="window.open('https://www.instagram.com/numabrica/','_blank')" aria-label="Instagram">Instagram</button>
+        <button id="reddit" onclick="window.open('https://www.reddit.com/r/Numabra/','_blank')" aria-label="Reddit Discussion">Reddit Discussion</button>
+        <button id="donations" onclick="window.open('https://ko-fi.com/numabra','_blank')" aria-label="Contributions">Contributions</button>
+        <button id="moreInfo" onclick="window.location.href='about.html'" aria-label="More About Numabra">More About Numabra</button>
+    </nav>
+
+    <main class="container">
+        <select id="languageSelect" aria-label="Select language">
+            <option value="en">Search in english database</option>
+            <option value="es">Buscar en base de datos en español</option>
+        </select>
+        
+        <h1 id="title">Numabra</h1>
+        <textarea id="wordsInput" aria-label="Enter words or numbers to calculate" rows="4"></textarea>
+        <button id="calculateButton" aria-label="Calculate values">Calculate</button>
+        
+        <div id="loadingMessage" style="display: none;" aria-live="polite">Loading...</div>
+        
+        <table id="resultsTable" style="display: none;" aria-label="Calculation results">
+            <thead>
+                <tr>
+                    <th>Palabra / Word</th>
+                    <th>Valor / Value</th>
+                    <th>Coincide con / Matches</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
+
+    <footer id="footerText">
+        Author: Leonel Elizondo - December 2024<br>
+        <a id="contactText" href="mailto:numabra594@gmail.com">Contact me</a>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
