@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-home">
     <nav class="top-buttons" aria-label="Quick links">
         <button id="blog" onclick="window.open('https://mi-casa-flota-en-el-oceano.webnode.page/','_blank')" aria-label="Personal Blog">Personal Blog</button>
         <button id="instagram" onclick="window.open('https://www.instagram.com/numabrica/','_blank')" aria-label="Instagram">Instagram</button>
@@ -26,7 +26,7 @@
         </select>
         
         <h1 id="title">Numabra</h1>
-        <textarea id="wordsInput" aria-label="Enter words or numbers to calculate" rows="4"></textarea>
+        <textarea id="wordsInput" placeholder="Enter words or numbers to calculate" rows="4"></textarea>
         <button id="calculateButton" aria-label="Calculate values">Calculate</button>
         
         <div id="loadingMessage" style="display: none;" aria-live="polite">Loading...</div>
@@ -42,6 +42,10 @@
             <tbody></tbody>
         </table>
     </main>
+
+    <div class="image-section">
+        <img src="assets/NumabraBackground.png" alt="Numabra illustration">
+    </div>
 
     <footer id="footerText">
         Author: Leonel Elizondo - December 2024<br>

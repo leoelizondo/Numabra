@@ -1,10 +1,10 @@
 :root {
-    --primary-bg: #0B0A0A;
-    --secondary-bg: #191919;
-    --accent-color: #3C0101;
-    --accent-hover: #F00505;
-    --text-color: #FFFFFF;
-    --border-color: #ddd;
+    --primary-bg: #f1dab1;
+    --secondary-bg: #fecc39;
+    --accent-color: #ccab3a;
+    --accent-hover: #fec104;
+    --text-color: #0B0A0A;
+    --border-color: #ece7e4;
   }
   
   body {
@@ -16,6 +16,36 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+  }
+
+  /* Background image only for the home page */
+  .bg-home {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* nice parallax feel on desktop */
+  }
+
+  .image-section {
+    display: flex;
+    justify-content: center;  /* centra horizontalmente */
+    align-items: center;
+    margin-bottom: 40px auto;        /* agrega espacio arriba y abajo */
+    width: 100%;
+  }
+
+  .image-section img {
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* iOS/low-end devices can stutter with fixed backgrounds—disable on small screens */
+  @media (max-width: 768px) {
+    .bg-home {
+      background-attachment: scroll;
+    }
   }
   
   .container {
@@ -61,14 +91,25 @@
   }
   
   textarea {
-    width: 100%;
-    min-height: 80px;
-    padding: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    margin-bottom: 10px;
-    font-size: 1rem;
-    resize: vertical;
+  width: 90%;
+  margin: 10px auto; /* centers horizontally */
+  display: block; /* ensure auto margins work */
+  min-height: 80px;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: vertical;
+  }
+
+  .justified {
+    text-align: justify;
+    text-justify: inter-word; /* mejora la distribución de espacios */
+  }
+
+  .right {
+    text-align: right;
+    text-justify: inter-word; /* mejora la distribución de espacios */
   }
   
   table {
