@@ -134,7 +134,7 @@
   
   .top-buttons {
     position: fixed;
-    top: 10px;
+    top: 50px;
     right: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -146,7 +146,31 @@
     flex: 1 1 auto;
     min-width: calc(25% - 10px);
   }
-  
+
+  .book-banner {
+    background-color: #d97434;
+    color: white;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .book-banner a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .book-banner a:hover {
+    color: var(--secondary-bg);
+  }
+
   footer {
     background-color: var(--accent-color);
     color: white;
@@ -164,26 +188,41 @@
   
   @media (max-width: 768px) {
     .container {
-      margin-top: 250px;
+      margin-top: 290px;
     }
-    
+
     .top-buttons {
       gap: 5px;
+      top: 50px;
+      right: 0;
+      left: 0;
+      justify-content: center;
+      padding: 0 10px;
     }
-    
+
     .top-buttons button {
       min-width: calc(50% - 5px);
       font-size: 0.9rem;
       padding: 8px 10px;
     }
+
+    .book-banner {
+      font-size: 1rem;
+      padding: 10px 15px;
+    }
   }
   
   @media (max-width: 480px) {
     .container {
-      margin-top: 300px;
+      margin-top: 340px;
     }
-    
+
     .top-buttons button {
       min-width: 100%;
+    }
+
+    .book-banner {
+      font-size: 0.95rem;
+      padding: 8px 10px;
     }
   }
